@@ -1,5 +1,17 @@
-
-
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif !important;
+}
+.footerlist .MuiListItemText-root {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.footerlist .MuiListItemText-root span {
+    font-size: 12px;
+    font-weight: 600;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: "Space Grotesk", sans-serif !important;
+}
+p, a, span, div ,li a ul{
+  font-family: "Inter", sans-serif !important;
 }

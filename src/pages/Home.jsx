@@ -82,8 +82,8 @@ useEffect(() => {
             <Box sx={{ color: "#000", textAlign: "center", flex: "0 0 23%", cursor: 'pointer' }} key={product.id}
     onClick={() => navigate(`/product/${product.id}`)}>
               <CardMedia
-                sx={{width: "75%", mx: "auto",
-                    height: 200,
+                sx={{width: "100%", mx: "auto",
+                    height: 250,
                     objectFit: "contain", // or "cover"
                     padding: 2,
                     backgroundColor: "#f5f5f5"
@@ -99,13 +99,14 @@ useEffect(() => {
                       WebkitLineClamp: 2,
                       WebkitBoxOrient: "vertical",
                       overflow: "hidden",
+                      py:2
                     }}
                   >
                     {shortText(product.title, 100)}
                   </Typography>
                   <Typography
                     variant="body1"
-                    
+                    sx={{pb:1}}
                   >
                     {product.price}
                   </Typography>

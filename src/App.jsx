@@ -2,23 +2,22 @@ import Header from "./component/Header";
 import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import Cart from "./pages/Cart";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CssBaseline } from "@mui/material";
-import "./style.css";
 import Footer from "./component/Footer";
-
+import "./style.css";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
   typography: {
-    fontFamily: "Montserrat, Arial, sans-serif",
+    fontFamily: "'Poppins', sans-serif", // your font here
   },
 });
 
 function App() {
   return (
-    <div>
-    <ThemeProvider theme={theme}>
+    <>
+    
     <CssBaseline />
     <BrowserRouter>
         <Header />
@@ -29,9 +28,9 @@ function App() {
         </Routes>
         <Footer />
         </BrowserRouter>
-    </ThemeProvider>
+   
         
-    </div>
+    </>
   )
 }
 
