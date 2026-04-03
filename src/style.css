@@ -1,17 +1,35 @@
 body {
   font-family: "Inter", sans-serif !important;
+  background: #fafafa !important;
 }
 .footerlist .MuiListItemText-root {
-    margin-top: 2px;
-    margin-bottom: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
-.footerlist .MuiListItemText-root span {
-    font-size: 12px;
-    font-weight: 600;
+.footerlist .MuiListItemText-root span,
+.footer .MuiTypography-body2 {
+  font-size: 12px;
+  font-weight: 600;
 }
-h1, h2, h3, h4, h5, h6{
-    font-family: "Space Grotesk", sans-serif !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Space Grotesk", sans-serif !important;
 }
-p, a, span, div ,li a ul{
+p,
+a,
+span,
+div,
+li a ul {
   font-family: "Inter", sans-serif !important;
+}
+.navlinks button a {
+  color: #fff;
+  text-decoration: none;
+}
+a.logo {
+  text-decoration: none;
 }
