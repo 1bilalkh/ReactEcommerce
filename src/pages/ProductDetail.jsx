@@ -24,7 +24,7 @@ function ProductDetail() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3000/products/${id}`)
+      .get(`https://fakestoreapi.com/products/${id}`)
       .then((res) => setProduct(res.data));
   }, [id]);
 
@@ -45,7 +45,7 @@ function ProductDetail() {
               >
                 <CardMedia
                   component="img"
-                  image={product.images}
+                  image={product.image}
                   alt={product.title}
                   sx={{
                     height: 400,

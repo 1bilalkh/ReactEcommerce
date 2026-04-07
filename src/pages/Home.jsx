@@ -11,6 +11,7 @@ import {
   CircularProgress,
 } from "@mui/material";
 import Rating from "@mui/material/Rating";
+import Hero from "../component/HeroSection.jsx";
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -18,7 +19,7 @@ function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch("https://fakestoreapi.com/products?limit=8")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
@@ -44,6 +45,10 @@ function Home() {
 
   return (
     <>
+      {/* <PageLayout title="Home | My Shop"></PageLayout> */}
+
+      <Hero title="Smart Products." subtitle="Best Products at Best Prices" />
+
       <Container sx={{ py: 2 }}>
         <Typography
           variant="h4"
@@ -75,8 +80,9 @@ function Home() {
                   backgroundColor: "#f5f5f5",
                 }}
                 component="img"
-                image={product.images}
+                image={product.image}
                 alt={product.title}
+                
               />
               <Typography
                 variant="body1"
@@ -88,7 +94,7 @@ function Home() {
                   py: 2,
                 }}
               >
-                {shortText(product.title, 30)}
+                {shortText(product.title, 20)}
               </Typography>
               <Typography variant="body1" sx={{ pb: 1 }}>
                 Price:{" "}
@@ -97,7 +103,7 @@ function Home() {
                 </Typography>
               </Typography>
               <Rating
-                sx={{ display: "none" }}
+                
                 value={product.rating?.rate || 0}
                 precision={0.5}
                 readOnly

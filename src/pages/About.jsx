@@ -10,15 +10,19 @@ import {
 import VerifiedIcon from "@mui/icons-material/Verified";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
+import Hero from "../component/HeroSection";
 
 function About() {
   return (
     <>
-      <Container sx={{ mt: 5 }}>
+      <Hero title="About Us." />
+
+      <Container>
         <Box
           sx={{
             width: "100%",
-            mx: "auto", // centers horizontally
+            mx: "auto",
+            mt: 5, // centers horizontally
           }}
         >
           <Typography

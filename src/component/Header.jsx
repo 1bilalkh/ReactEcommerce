@@ -1,19 +1,17 @@
 import { Container } from "@mui/material";
 import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
 import { Link } from "react-router-dom";
-import homebanner from "../assets/hero-bg.png";
+//import homebanner from "../assets/hero-bg.png";
 
 function Header() {
   return (
     <AppBar
       position="static"
       sx={{
-        backgroundImage: `url(${homebanner})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
+        background: "#004439",
+
         color: "#ffffff",
-        py: 16,
+        py: 2,
         textAlign: "start",
         boxShadow: "none",
         px: 0,
@@ -22,7 +20,12 @@ function Header() {
     >
       <Container>
         <Toolbar
-          sx={{ justifyContent: "space-between", p: 0, px: 0, color: "#fff" }}
+          sx={{
+            justifyContent: "space-between",
+            p: 0,
+            px: 0,
+            color: "#40473d",
+          }}
         >
           {/* Logo / Title */}
           <Link to="/" className="logo">
@@ -56,36 +59,6 @@ function Header() {
             </Button>
           </Box>
         </Toolbar>
-        <Box sx={{ py: 9, pb: 14 }}>
-          <Container>
-            <Box>
-              <Typography variant="h2" fontWeight="bold">
-                Smart products. <br />
-                Better living.
-              </Typography>
-              <Typography
-                variant="h6"
-                sx={{ mt: 0, textTransform: "capitalize" }}
-              >
-                Best products at best prices
-              </Typography>
-              <Button
-                variant="contained"
-                sx={{
-                  borderRadius: 20,
-                  mt: 3,
-                  px: 3,
-                  py: 1,
-                  background: "#d5d52c",
-                  color: "#004439",
-                  fontWeight: "600",
-                }}
-              >
-                Shop Now
-              </Button>
-            </Box>
-          </Container>
-        </Box>
       </Container>
     </AppBar>
   );

@@ -28,7 +28,6 @@ function Checkout() {
             size={8}
             sx={{ background: "#fff", padding: 3, borderRadius: 2 }}
           >
-          
             <Typography variant="h6" gutterBottom sx={{ pb: 2 }}>
               Shipping Details
             </Typography>
@@ -67,46 +66,44 @@ function Checkout() {
             </Grid>
           </Grid>
           <Grid size={4}>
-           
-              <CardContent>
-                <Typography variant="h6">Order Summary</Typography>
+            <CardContent>
+              <Typography variant="h6">Order Summary</Typography>
 
-                {cart.map((item) => (
-                  <Box
-                    key={item.id}
-                    sx={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      my: 1,
-                    }}
-                  >
-                    <Typography>{item.title}</Typography>
-                    <Typography>${item.price}</Typography>
-                  </Box>
-                ))}
-
-                <Box sx={{ borderTop: "1px solid #ddd", mt: 2, pt: 2 }}>
-                  <Typography variant="h6">
-                    Total: ${totalPrice.toFixed(2)}
-                  </Typography>
-                </Box>
-
-                <Button
-                  fullWidth
-                  variant="contained"
+              {cart.map((item) => (
+                <Box
+                  key={item.id}
                   sx={{
-                    mt: 3,
-                    background: "#d5d52c",
-                    color: "#004439",
-                    fontWeight: "600",
-                    borderRadius: 5,
+                    display: "flex",
+                    justifyContent: "space-between",
+                    my: 1,
                   }}
-                  onClick={handleOrder}
                 >
-                  Place Order
-                </Button>
-              </CardContent>
-            
+                  <Typography>{item.title}</Typography>
+                  <Typography>${item.price}</Typography>
+                </Box>
+              ))}
+
+              <Box sx={{ borderTop: "1px solid #ddd", mt: 2, pt: 2 }}>
+                <Typography variant="h6">
+                  Total: ${totalPrice.toFixed(2)}
+                </Typography>
+              </Box>
+
+              <Button
+                fullWidth
+                variant="contained"
+                sx={{
+                  mt: 3,
+                  background: "#d5d52c",
+                  color: "#004439",
+                  fontWeight: "600",
+                  borderRadius: 5,
+                }}
+                onClick={handleOrder}
+              >
+                Place Order
+              </Button>
+            </CardContent>
           </Grid>
         </Grid>
       </Box>

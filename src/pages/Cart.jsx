@@ -51,7 +51,7 @@ function Cart() {
               {/* Product Image */}
               <CardMedia
                 component="img"
-                image={item.images}
+                image={item.image}
                 alt={item.title}
                 sx={{ width: 100, height: 100, objectFit: "contain" }}
               />
